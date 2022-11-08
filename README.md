@@ -1,3 +1,4 @@
-#Imersão AluraTube de React
+# Imersão AluraTube de React
 
-Nem ideia de como fazer isso!
+## O que é?
+Projeto para aprender React, desenvolvido durante a Imersão React da Alura.
