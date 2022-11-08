@@ -5,7 +5,7 @@ export const StyledFavoritos = styled.div`
   width: 100%;
   padding: 16px;
   overflow: hidden;
-  margin-top: -50px;
+  margin-top: -35px;
   h2 {
     font-size: 16px;
     margin-bottom: 16px;

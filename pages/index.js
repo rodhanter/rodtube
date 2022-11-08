@@ -1,3 +1,4 @@
+import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
 import { CSSReset } from "../src/components/CSSReset";
@@ -8,6 +9,7 @@ import { StyledFavoritos } from "../src/components/Favoritos";
 function HomePage() {
     const estilosDaHomePage = {
     };
+    const [valorDoFiltro, setValorDoFiltro] = React.useState("");
 
     return (
         <>
@@ -17,9 +19,9 @@ function HomePage() {
                 flexDirection: "column",
                 flex: 1,
             }}>
-                <Menu />
+                <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
                 <Header banner={config.banner}/>
-                <Timeline playlists={config.playlists}>
+                <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>
                     Conteúdo
                 </Timeline>
                 <Favs favs={config.favoritos}>
@@ -51,14 +53,23 @@ const StyledHeader = styled.div`
         gap: 16px;
     }
 `;
-
+const StyledBanner = styled.div`
+    background-color: blue;
+    background-image: url(${({ bg }) => bg});
+    /* background-image: url(${config.bg}); */
+    height: 230px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+`;
 
 function Header(props) {
     return (
         <StyledHeader>
-            <div className="banner">
+            <StyledBanner bg={config.banner} />
+            {/* <div className="banner">
                 <img src={`${props.banner}`} />
-            </div>
+            </div> */}
             <section className="user-info">
                 <a href={`https://github.com/${config.github}`} target="_blank"><img src={`https://github.com/${config.github}.png`} /></a>
                 <div>
@@ -74,7 +85,7 @@ function Header(props) {
     )
 }
 
-function Timeline(propriedades) {
+function Timeline({searchValue, ...propriedades}) {
     const playlistNames = Object.keys(propriedades.playlists);
     // Statement
     // Retorno por expressão
@@ -82,13 +93,15 @@ function Timeline(propriedades) {
         <StyledTimeline>
             {playlistNames.map((playlistName) => {
                 const videos = propriedades.playlists[playlistName];
-                console.log(playlistName);
-                console.log(videos);
                 return (
                     <section>
                         <h2>{playlistName}</h2>
                         <div>
-                            {videos.map((video) => {
+                            {videos.filter((video) => {
+                                const titleNormalized = video.title.toLowerCase();
+                                const searchValueNormalized = searchValue.toLowerCase();
+                                return titleNormalized.includes(searchValueNormalized)
+                            }).map((video) => {
                                 return (
                                     <a href={video.url}>
                                         <img src={video.thumb} />
