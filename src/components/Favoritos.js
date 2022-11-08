@@ -28,9 +28,9 @@ export const StyledFavoritos = styled.div`
       float: left;
       display: grid;
       grid-gap: 16px;
-      grid-template-columns: repeat(auto-fill,minmax(120px,1fr));
+      grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
       grid-auto-flow: column;
-      grid-auto-columns: minmax(120px,1fr);
+      grid-auto-columns: minmax(100px,1fr);
 
       /* overflow-x: scroll; */
       scroll-snap-type: x mandatory;
@@ -38,8 +38,13 @@ export const StyledFavoritos = styled.div`
         scroll-snap-align: start;
         span {
           padding-top: 5px;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16px;
+          font-family: 'Helvetica';
+          font-style: normal;
           display: block;
-          color: ${({ theme }) => theme.textColorBase || "#222222"};
+          color: black;
         }
       }
     }
