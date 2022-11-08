@@ -6,10 +6,7 @@ import { StyledTimeline } from "../src/components/Timeline";
 
 function HomePage() {
     const estilosDaHomePage = {
-        // backgroundColor: "red" 
     };
-
-    // console.log(config.playlists);
 
     return (
         <>
@@ -18,7 +15,6 @@ function HomePage() {
                 display: "flex",
                 flexDirection: "column",
                 flex: 1,
-                // backgroundColor: "red",
             }}>
                 <Menu />
                 <Header />
@@ -32,23 +28,18 @@ function HomePage() {
 
 export default HomePage
 
-// function Menu() {
-//     return (
-//         <div>
-//             Menu
-//         </div>
-//     )
-// }
-
-
 const StyledHeader = styled.div`
-    img {
+    .banner img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    .user-info img {
         width: 80px;
         height: 80px;
         border-radius: 50%;
     }
     .user-info {
-        margin-top: 50px;
         display: flex;
         align-items: center;
         width: 100%;
@@ -56,10 +47,14 @@ const StyledHeader = styled.div`
         gap: 16px;
     }
 `;
+
+
 function Header() {
     return (
         <StyledHeader>
-            {/* <img src="banner" /> */}
+            <div className="banner">
+                <img src="images/banner.jpg" />
+            </div>
             <section className="user-info">
                 <img src={`https://github.com/${config.github}.png`} />
                 <div>
@@ -76,7 +71,6 @@ function Header() {
 }
 
 function Timeline(propriedades) {
-    // console.log("Dentro do componente", propriedades.playlists);
     const playlistNames = Object.keys(propriedades.playlists);
     // Statement
     // Retorno por expressão
