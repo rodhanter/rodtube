@@ -2,132 +2,145 @@
     "name": "Rodrigo Marinangeli (rodhanter)",
     "job": "Educomunicador",
     "github": "rodhanter",
+    "banner": "images/banner.jpg",
     "playlists": {
-        "jogos": [
+        "automação": [
             {
-                "title": "Frostpunk - Neve e Steak tartare",
-                "url": "https://www.youtube.com/watch?v=QsqatJxAUtk",
-                "thumb": "https://img.youtube.com/vi/QsqatJxAUtk/hqdefault.jpg"
+                "title": "6 RAZÕES para optar pela automação LOCAL fora da nuvem",
+                "url": "https://youtu.be/qLXRK8f-2dk",
+                "thumb": "https://img.youtube.com/vi/qLXRK8f-2dk/hqdefault.jpg"
             },
             {
-                "title": "Frostpunk - Neve e Steak tartare",
-                "url": "https://www.youtube.com/watch?v=O8jtAyPuhNg",
-                "thumb": "https://img.youtube.com/vi/O8jtAyPuhNg/hqdefault.jpg"
+                "title": "Home Assistant do ZERO - Aula 01",
+                "url": "https://www.youtube.com/watch?v=i438w9ED9RE",
+                "thumb": "https://img.youtube.com/vi/i438w9ED9RE/hqdefault.jpg"
             },
             {
-                "title": "Gas Station Simulator - 8 dias sem dormir!",
-                "url": "https://www.youtube.com/watch?v=R1d0DyRDG_Q",
-                "thumb": "https://img.youtube.com/vi/R1d0DyRDG_Q/hqdefault.jpg"
+                "title": "Casa Inteligente - Como montar a sua! - Google Home, Alexa, Siri ou Bixby",
+                "url": "https://youtu.be/ReFizrM8Bx4",
+                "thumb": "https://img.youtube.com/vi/ReFizrM8Bx4/hqdefault.jpg"
             },
             {
-                "title": "Gartic Phone - Não assista a esse NerdPlayer!",
-                "url": "https://www.youtube.com/watch?v=0oJQUs5oRiM",
-                "thumb": "https://img.youtube.com/vi/0oJQUs5oRiM/hqdefault.jpg"
+                "title": "Comparativo de lâmpadas inteligentes #1 - Yeelight x Positivo x Elgin x Lonsonho",
+                "url": "https://youtu.be/2vxLefEHDpk",
+                "thumb": "https://img.youtube.com/vi/2vxLefEHDpk/hqdefault.jpg"
             },
             {
-                "title": "Netdecking Estraga o Magic?",
-                "url": "https://www.youtube.com/watch?v=dXihyhYEsEc",
-                "thumb": "https://img.youtube.com/vi/dXihyhYEsEc/hqdefault.jpg"
+                "title": "25 Home Automation Ideas: Ultimate Smart Home Tour!",
+                "url": "https://youtu.be/F-mEA5RN_yo",
+                "thumb": "https://img.youtube.com/vi/F-mEA5RN_yo/hqdefault.jpg"
             },
             {
-                "title": "Cities: Skylines - EPCOTAB, o futuro de Saint Laurrent",
-                "url": "https://www.youtube.com/watch?v=zybKHMgLCWU",
-                "thumb": "https://img.youtube.com/vi/zybKHMgLCWU/hqdefault.jpg"
+                "title": "How to flash ESP8266 NodeMCU on Windows, Linux, Arduino and Raspberry Pi",
+                "url": "https://youtu.be/9mZ33w-p458",
+                "thumb": "https://img.youtube.com/vi/9mZ33w-p458/hqdefault.jpg"
             },
             {
-                "title": "We Were Here Together - Os Enigmas deste Mundo",
-                "url": "https://www.youtube.com/watch?v=UKgQsrHUG40",
-                "thumb": "https://img.youtube.com/vi/UKgQsrHUG40/hqdefault.jpg"
+                "title": "ROBÔ ASPIRADOR LIECTROUX XR500",
+                "url": "https://youtu.be/wC-Mvdu6dbU",
+                "thumb": "https://img.youtube.com/vi/wC-Mvdu6dbU/hqdefault.jpg"
             },
             {
-                "title": "Microsoft Flight Simulator - Top Gun: Oceania - Missão RJ!",
-                "url": "https://www.youtube.com/watch?v=n3TneUb5c-w",
-                "thumb": "https://img.youtube.com/vi/n3TneUb5c-w/hqdefault.jpg"
+                "title": "Xiaomi Aqara (Mi Home) Gateway in NodeRED",
+                "url": "https://youtu.be/ClPvPwB7pYA",
+                "thumb": "https://img.youtube.com/vi/ClPvPwB7pYA/hqdefault.jpg"
             }
         ],
-        "front-end": [
+        "game studies": [
             {
-                "title": "Jogo com JavaScript #01: Criando um Flappy Bird do ZERO!!!",
-                "url": "https://youtube.com/watch?v=jOAU81jdi-c",
-                "thumb": "https://img.youtube.com/vi/jOAU81jdi-c/hqdefault.jpg"
+                "title": "KRIEGSSPIEL: O tataravô dos videogames",
+                "url": "https://youtu.be/47cPUBVccr8",
+                "thumb": "https://img.youtube.com/vi/47cPUBVccr8/hqdefault.jpg"
             },
             {
-                "title": "Jogo com JavaScript #01: Criando um Flappy Bird do ZERO!!!",
-                "url": "https://www.youtube.com/watch?v=llF6vD-RljE",
-                "thumb": "https://img.youtube.com/vi/llF6vD-RljE/hqdefault.jpg"
+                "title": "Videogames e política são inseparáveis",
+                "url": "https://youtu.be/bcY3Qz0oae4",
+                "thumb": "https://img.youtube.com/vi/bcY3Qz0oae4/hqdefault.jpg"
             },
             {
-                "title": "A Primeira Aula de Flutter Que Todo Mundo Deveria Ter",
-                "url": "https://www.youtube.com/watch?v=J4BVaXkwmM8",
-                "thumb": "https://img.youtube.com/vi/J4BVaXkwmM8/hqdefault.jpg"
+                "title": "Vértice #356: God of War Ragnarok, NFT da Square, PSVR2...",
+                "url": "https://youtu.be/TqyawFDS5BQ",
+                "thumb": "https://img.youtube.com/vi/TqyawFDS5BQ/hqdefault.jpg"
             },
             {
-                "title": "O QUE SÃO FRAMEWORKS E BIBLIOTECAS? QUAIS AS DIFERENÇAS?",
-                "url": "https://www.youtube.com/watch?v=dp0zB4n3MUs",
-                "thumb": "https://img.youtube.com/vi/dp0zB4n3MUs/hqdefault.jpg"
+                "title": "Drops Debate #65: Entrevista com Ricardo Regis sobre caso Xbox Mil Grau",
+                "url": "https://youtu.be/IPKmq64mVws",
+                "thumb": "https://img.youtube.com/vi/IPKmq64mVws/hqdefault.jpg"
             },
             {
-                "title": "Angular (O Vídeo que Você Precisava para Começar no Framework) // Dicionário do Programador",
-                "url": "https://www.youtube.com/watch?v=Yf0rC7dERjg",
-                "thumb": "https://img.youtube.com/vi/Yf0rC7dERjg/hqdefault.jpg"
+                "title": "What is a REAL HACKER? | Experts Talk",
+                "url": "https://youtu.be/oCHu9kWuv_Y",
+                "thumb": "https://img.youtube.com/vi/oCHu9kWuv_Y/hqdefault.jpg"
             },
             {
-                "title": "Como Foi Programado um App Que Faz Mágica",
-                "url": "https://www.youtube.com/watch?v=I36seuWUe5s",
-                "thumb": "https://img.youtube.com/vi/I36seuWUe5s/hqdefault.jpg"
+                "title": "O Racismo de Lovecraft: Subvertendo o Terror Cósmico",
+                "url": "https://youtu.be/S2zOcoxvSB0",
+                "thumb": "https://img.youtube.com/vi/S2zOcoxvSB0/hqdefault.jpg"
             },
             {
-                "title": "O que todo iniciante em Front End deveria aprender | Como manipular arrays e objetos em JavaScript",
-                "url": "https://www.youtube.com/watch?v=yS7AcF-xRUg",
-                "thumb": "https://img.youtube.com/vi/yS7AcF-xRUg/hqdefault.jpg"
-            },
-            {
-                "title": "5 Erros Históricos do CSS",
-                "url": "https://www.youtube.com/watch?v=HNjkqONzGS0",
-                "thumb": "https://img.youtube.com/vi/HNjkqONzGS0/hqdefault.jpg"
-            },
-            {
-                "title": "Deploy de Front End ATUALIZADO! | O que eu uso para hospedagem de Front End",
-                "url": "https://www.youtube.com/watch?v=d9c0r-J6CdM",
-                "thumb": "https://img.youtube.com/vi/d9c0r-J6CdM/hqdefault.jpg"
+                "title": "Os Diferentes Tipos de Jogos de Terror - Lado B",
+                "url": "https://youtu.be/Lk1-Uzgy2QQ",
+                "thumb": "https://img.youtube.com/vi/Lk1-Uzgy2QQ/hqdefault.jpg"
             }
         ],
-        "back-end": [
+        "activist gaming": [
             {
-                "title": "Node JS: Construindo CRUDs com file system focando em serialização e JSON",
-                "url": "https://www.youtube.com/watch?v=dvd3pNYh7So",
-                "thumb": "https://img.youtube.com/vi/dvd3pNYh7So/hqdefault.jpg"
+                "title": "ONE BEAT MIN - OFFICIAL REVEAL TRAILER",
+                "url": "https://youtu.be/UWjgvRRkqrY",
+                "thumb": "https://img.youtube.com/vi/UWjgvRRkqrY/hqdefault.jpg"
             },
             {
-                "title": "Node JS: Construindo CRUDs com file system focando em serialização e JSON",
-                "url": "https://www.youtube.com/watch?v=8q36rNS5yVo",
-                "thumb": "https://img.youtube.com/vi/8q36rNS5yVo/hqdefault.jpg"
+                "title": "Conheça Dandara - Janela Indie #70",
+                "url": "https://youtu.be/o55q0wqId0c",
+                "thumb": "https://img.youtube.com/vi/o55q0wqId0c/hqdefault.jpg"
             },
             {
-                "title": "O que é o Java? #HipstersPontoTube",
-                "url": "https://www.youtube.com/watch?v=90NcVNsKGik",
-                "thumb": "https://img.youtube.com/vi/90NcVNsKGik/hqdefault.jpg"
+                "title": "Jogos Diversos :: Pirituba :: 2019",
+                "url": "https://youtu.be/RufYpP5NWIg",
+                "thumb": "https://img.youtube.com/vi/RufYpP5NWIg/hqdefault.jpg"
             },
             {
-                "title": "O que é Machine Learning? #HipstersPontoTube",
-                "url": "https://www.youtube.com/watch?v=Iuz_jc96bQk",
-                "thumb": "https://img.youtube.com/vi/Iuz_jc96bQk/hqdefault.jpg"
+                "title": "Representação e Diversidade na Cultura Digital",
+                "url": "https://youtu.be/021-qZPAHzc",
+                "thumb": "https://img.youtube.com/vi/021-qZPAHzc/hqdefault.jpg"
             },
             {
-                "title": "A MELHOR linguagem de programação com Fabio Akita | #HipstersPontoTube",
-                "url": "https://www.youtube.com/watch?v=imB0QVoNrGc",
-                "thumb": "https://img.youtube.com/vi/imB0QVoNrGc/hqdefault.jpg"
+                "title": "Jogos eletrônicos em Jogo - Educação",
+                "url": "https://youtu.be/YN8D8vXpAd4",
+                "thumb": "https://img.youtube.com/vi/YN8D8vXpAd4/hqdefault.jpg"
             },
             {
-                "title": "Top 5 libs que todo aplicativo Android deve ter com Alex Felipe | #HipstersPontoTube",
-                "url": "https://www.youtube.com/watch?v=ldRbnpy-qQs",
-                "thumb": "https://img.youtube.com/vi/ldRbnpy-qQs/hqdefault.jpg"
+                "title": "How Playing Games Can Change the World",
+                "url": "https://youtu.be/h0u4accv15c",
+                "thumb": "https://img.youtube.com/vi/h0u4accv15c/hqdefault.jpg"
             },
             {
-                "title": "O que é o C#? #HipstersPontoTube",
-                "url": "https://www.youtube.com/watch?v=0JWMVc1CqpA",
-                "thumb": "https://img.youtube.com/vi/0JWMVc1CqpA/hqdefault.jpg"
+                "title": "Gonzalo Frasca - Como engajar e ensinar alunos por meio de jogos - Transformar 2017",
+                "url": "https://youtu.be/C0YeO3uBNYg",
+                "thumb": "https://img.youtube.com/vi/C0YeO3uBNYg/hqdefault.jpg"
             }
         ]
-    }
+    },
+    "favoritos": [
+            {
+                "title": "Tempero Drag",
+                "url": "https://www.youtube.com/c/TemperoDrag",
+                "thumb": "https://yt3.ggpht.com/ytc/AMLnZu_f46YC76PvSFgFlfd2157maEkw_e4AoawovMF9ng=s88-c-k-c0x00ffffff-no-rj"
+            },
+            {
+                "title": "IPUSP",
+                "url": "https://www.youtube.com/c/PsicologiaUSP",
+                "thumb": "https://yt3.ggpht.com/E7RxzQe3lJ4wGSrMXq8RHyFZ_advVp28iUImoa-mc8d5A-8PM_4znLDzOL-nNRR_xLO5mgteWw=s88-c-k-c0x00ffffff-no-rj"
+            },
+            {
+                "title": "Tati",
+                "url": "https://www.youtube.com/channel/UCWnXDFeDrVTW65XKNAXqg9A",
+                "thumb": "https://yt3.ggpht.com/ytc/AMLnZu-THAapO3ucLPQw7pie5N4zzuB_tntB6vpMfC5dB8w=s88-c-k-c0x00ffffff-no-rj"
+            },
+            {
+                "title": "Overloadr",
+                "url": "https://www.youtube.com/c/OverloadrBr1",
+                "thumb": "https://yt3.ggpht.com/ytc/AMLnZu_T6Q4Te1AC6Up1f0PVNyrVChj3UbobopnX17Lp=s88-c-k-c0x00ffffff-no-rj"
+            }
+    ]
 }
