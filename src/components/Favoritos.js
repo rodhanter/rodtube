@@ -6,10 +6,12 @@ export const StyledFavoritos = styled.div`
   padding: 16px;
   overflow: hidden;
   margin-top: -35px;
+  color: ${({ theme }) => theme.backgroundLevel2};
   h2 {
     font-size: 16px;
     margin-bottom: 16px;
     text-transform: capitalize;
+    color: ${({ theme }) => theme.textColorBase};
 
   }
   img {
@@ -44,7 +46,7 @@ export const StyledFavoritos = styled.div`
           font-family: 'Helvetica';
           font-style: normal;
           display: block;
-          color: black;
+          color: ${({ theme }) => theme.textColorBase};
         }
       }
     }

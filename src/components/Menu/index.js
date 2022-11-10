@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import Search from "./components/Search";
+import DarkModeSwitch from "./components/DarkModeSwitch";
 
 const StyledMenu = styled.header`
   display: flex;
   flex-direction: row;
   height: 56px;
   justify-content: space-between;
-  background-color: ${({ theme }) => theme.backgroundLevel1 || "#FFFFFF"};
+  background-color: ${({ theme }) => theme.backgroundLevel1 || "#202020"};
   border: 1px solid ${({ theme }) => theme.borderBase || "#e5e5e5"};
   align-items: center;
   padding: 0 16px;
@@ -21,7 +22,7 @@ const StyledMenu = styled.header`
     }
     .text {
       fill: ${({ theme }) => theme.textColorBase || "#222222"};
-    }
+    } 
   }
 `;
 
@@ -32,6 +33,7 @@ export default function Menu({ valorDoFiltro, setValorDoFiltro }) {
         <Logo />
       </div>
       <Search valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
+      <DarkModeSwitch />
     </StyledMenu>
   );
 }

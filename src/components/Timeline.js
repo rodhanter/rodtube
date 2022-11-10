@@ -21,11 +21,11 @@ export const StyledTimeline = styled.div`
     width: 0 !important
   }
   div::-webkit-scrollbar-track { 
-    background: #F0F0F0;
+    background: ${({ theme }) => theme.backgroundLevel2};
     border-radius: 25px;
   }
   div::-webkit-scrollbar-thumb { 
-    background: linear-gradient(#E5E5E5, #E0E0E0);
+    background: ${({ theme }) => theme.borderBase};
     border-radius: 25px;
   }
   section {

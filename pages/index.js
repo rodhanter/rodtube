@@ -1,19 +1,15 @@
 import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
-import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 import { StyledFavoritos } from "../src/components/Favoritos";
 
 function HomePage() {
-    const estilosDaHomePage = {
-    };
     const [valorDoFiltro, setValorDoFiltro] = React.useState("");
 
     return (
         <>
-            <CSSReset />
             <div style={{
                 display: "flex",
                 flexDirection: "column",
@@ -35,6 +31,8 @@ function HomePage() {
 export default HomePage
 
 const StyledHeader = styled.div`
+    background-color: ${({ theme }) => theme.backgroundLevel2};
+
     .banner img {
         width: 100%;
         height: 230px;
@@ -52,9 +50,11 @@ const StyledHeader = styled.div`
         padding: 16px 32px;
         gap: 16px;
     }
+    .user-info p {
+      color: #666666;
+    }
 `;
 const StyledBanner = styled.div`
-    background-color: blue;
     background-image: url(${({ bg }) => bg});
     /* background-image: url(${config.bg}); */
     height: 230px;
@@ -94,7 +94,7 @@ function Timeline({searchValue, ...propriedades}) {
             {playlistNames.map((playlistName) => {
                 const videos = propriedades.playlists[playlistName];
                 return (
-                    <section>
+                    <section key={playlistName}>
                         <h2>{playlistName}</h2>
                         <div>
                             {videos.filter((video) => {
@@ -103,7 +103,7 @@ function Timeline({searchValue, ...propriedades}) {
                                 return titleNormalized.includes(searchValueNormalized)
                             }).map((video) => {
                                 return (
-                                    <a href={video.url}>
+                                    <a key={video.url} href={video.url}>
                                         <img src={video.thumb} />
                                         <span>
                                             {video.title}
@@ -130,16 +130,14 @@ function Favs(propriedades) {
           {FavNames.map((FavName) => {
               const icone = propriedades.favs[FavName];
               return (
-                  <div>
-                      <div>
-                      <a href={icone.url}>
+                      <div key={icone.title}>
+                      <a key={icone.url} href={icone.url}>
                                       <img src={icone.thumb} />
                                       <span>
                                           {icone.title}
                                       </span>
                                   </a>
                       </div>
-                  </div>
               )
           })}
           </section>
