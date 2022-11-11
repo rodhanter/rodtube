@@ -4,9 +4,32 @@ import styled from "styled-components";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 import { StyledFavoritos } from "../src/components/Favoritos";
+import { videoService } from "../src/services/videoService";
 
 function HomePage() {
+    const service = videoService();
     const [valorDoFiltro, setValorDoFiltro] = React.useState("");
+    const [playlists, setPlaylists] = React.useState({});     // config.playlists
+
+    React.useEffect(() => {
+        console.log("useEffect");
+        service
+            .getAllVideos()
+            .then((dados) => {
+                console.log(dados.data);
+                // Forma imutavel
+                const novasPlaylists = {};
+                dados.data.forEach((video) => {
+                    if (!novasPlaylists[video.playlist]) novasPlaylists[video.playlist] = [];
+                    novasPlaylists[video.playlist] = [
+                        video,
+                        ...novasPlaylists[video.playlist],
+                    ];
+                });
+
+                setPlaylists(novasPlaylists);
+            });
+    }, []);
 
     return (
         <>
@@ -16,8 +39,8 @@ function HomePage() {
                 flex: 1,
             }}>
                 <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
-                <Header banner={config.banner}/>
-                <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>
+                <Header banner={config.banner} />
+                <Timeline searchValue={valorDoFiltro} playlists={playlists}>
                     Conteúdo
                 </Timeline>
                 <Favs favs={config.favoritos}>
@@ -67,9 +90,6 @@ function Header(props) {
     return (
         <StyledHeader>
             <StyledBanner bg={config.banner} />
-            {/* <div className="banner">
-                <img src={`${props.banner}`} />
-            </div> */}
             <section className="user-info">
                 <a href={`https://github.com/${config.github}`} target="_blank"><img src={`https://github.com/${config.github}.png`} /></a>
                 <div>
@@ -85,10 +105,8 @@ function Header(props) {
     )
 }
 
-function Timeline({searchValue, ...propriedades}) {
+function Timeline({ searchValue, ...propriedades }) {
     const playlistNames = Object.keys(propriedades.playlists);
-    // Statement
-    // Retorno por expressão
     return (
         <StyledTimeline>
             {playlistNames.map((playlistName) => {
@@ -120,27 +138,25 @@ function Timeline({searchValue, ...propriedades}) {
 }
 
 function Favs(propriedades) {
-  const FavNames = Object.keys(propriedades.favs);
-  // Statement
-  // Retorno por expressão
-  return (
-      <StyledFavoritos>
-          <section>
-          <h2>RodTubes Favoritos</h2>
-          {FavNames.map((FavName) => {
-              const icone = propriedades.favs[FavName];
-              return (
-                      <div key={icone.title}>
-                      <a key={icone.url} href={icone.url}>
-                                      <img src={icone.thumb} />
-                                      <span>
-                                          {icone.title}
-                                      </span>
-                                  </a>
-                      </div>
-              )
-          })}
-          </section>
-      </StyledFavoritos>
-  )
+    const FavNames = Object.keys(propriedades.favs);
+    return (
+        <StyledFavoritos>
+            <section>
+                <h2>RodTubes Favoritos</h2>
+                {FavNames.map((FavName) => {
+                    const icone = propriedades.favs[FavName];
+                    return (
+                        <div key={icone.title}>
+                            <a key={icone.url} href={icone.url}>
+                                <img src={icone.thumb} />
+                                <span>
+                                    {icone.title}
+                                </span>
+                            </a>
+                        </div>
+                    )
+                })}
+            </section>
+        </StyledFavoritos>
+    )
 }
