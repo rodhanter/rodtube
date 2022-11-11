@@ -2,7 +2,6 @@ import React from "react";
 import { StyledRegisterVideo } from "./styles";
 import config from "../../../config.json";
 import { createClient } from "@supabase/supabase-js";
-import { createClient } from "@supabase/supabase-js";
 
 
 function splitMulti(str, tokens){
