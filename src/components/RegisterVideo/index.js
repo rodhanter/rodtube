@@ -1,6 +1,7 @@
 import React from "react";
 import { StyledRegisterVideo } from "./styles";
 import config from "../../../config.json";
+import { createClient } from "@supabase/supabase-js";
 
 
 function splitMulti(str, tokens){
@@ -41,10 +42,14 @@ function useForm(propsDoForm) {
         }
     };
 }
+const PROJECT_URL = "https://jihzrlucbhsknfrnlzeh.supabase.co";
+const PUBLIC_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImppaHpybHVjYmhza25mcm5semVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjgxNjMyMTcsImV4cCI6MTk4MzczOTIxN30.0sjh8GKGY3_nG-VOmdHtUTCR3rXvgq2HSIfUthkDZDI";
+const supabase = createClient(PROJECT_URL, PUBLIC_KEY);
+
 
 export default function RegisterVideo() {
     const formCadastro = useForm({
-        initialValues: { title: "Video Title", url: "https://youtu.be/xxxxxxxx" }
+        initialValues: { title: "Video Title", url: "https://youtu.be/xxxxxxxx", playlist: "Add Novos" }
     });
     const [formVisivel, setFormVisivel] = React.useState(false);
     const playlistNames = Object.keys(config.playlists);
@@ -60,6 +65,18 @@ export default function RegisterVideo() {
                     <form onSubmit={(evento) => {
                         evento.preventDefault();
                         console.log(formCadastro.values);
+                        supabase.from("video").insert({
+                            title: formCadastro.values.title,
+                            url: formCadastro.values.url,
+                            thumb: formCadastro.values.thumb,
+                            playlist: formCadastro.values.playlist,
+                        })
+                        .then((response) => {
+                            console.log(response);
+                        })
+                        .catch((err) => {
+                            console.log(err);
+                        })
 
                         setFormVisivel(false);
                         formCadastro.clearForm();
@@ -69,7 +86,7 @@ export default function RegisterVideo() {
                                 X
                             </button>
                             <select name="playlist" onChange={formCadastro.handleChange}>
-                            <option key="Select Playlist" value="Select Playlist">Select Playlist</option>
+                            <option key="Add Novos" value="Add Novos">Novos</option>
                             {playlistNames.map((playlistName) => {
                             return (
                                 <option key={playlistName} value={playlistName}>{playlistName}</option>

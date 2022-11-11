@@ -18,7 +18,9 @@ export const StyledTimeline = styled.div`
     height: auto;
   }
   div::-webkit-scrollbar { 
+    height: 8px;
     width: 0 !important
+    
   }
   div::-webkit-scrollbar-track { 
     background: ${({ theme }) => theme.backgroundLevel2};
@@ -43,6 +45,7 @@ export const StyledTimeline = styled.div`
       grid-auto-columns: minmax(200px,1fr);
       overflow-x: auto;
       scroll-snap-type: x mandatory;
+      padding-bottom: 8px;
       a {
         scroll-snap-align: start;
         span {
