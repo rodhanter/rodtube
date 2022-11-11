@@ -22,7 +22,7 @@ function useForm(propsDoForm) {
             console.log(evento.target);
             const value = evento.target.value;
             const name = evento.target.name;
-            const split = splitMulti(value, ["watch?v=", "vi/", "be/"]);
+            const split = splitMulti(value, ["watch?v=", "vi/", "be/", "&"]);
             var thumb = split[1];
             if(thumb) {
             setValues({
@@ -77,9 +77,9 @@ export default function RegisterVideo() {
                         .catch((err) => {
                             console.log(err);
                         })
-
                         setFormVisivel(false);
                         formCadastro.clearForm();
+
                     }}>
                         <div>
                             <button type="button" className="close-modal" onClick={() => setFormVisivel(false)}>

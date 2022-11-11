@@ -29,6 +29,7 @@ const StyledMenu = styled.header`
 export default function Menu({ valorDoFiltro, setValorDoFiltro }) {
   return (
     <StyledMenu>
+      <title>RodTube - Imersão Alura</title>
       <div>
         <Logo />
       </div>
