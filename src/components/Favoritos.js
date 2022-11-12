@@ -5,7 +5,7 @@ export const StyledFavoritos = styled.div`
   width: 100%;
   padding: 16px;
   overflow: hidden;
-  margin-top: -35px;
+  margin-top: -25px;
   color: ${({ theme }) => theme.backgroundLevel2};
   h2 {
     font-size: 16px;

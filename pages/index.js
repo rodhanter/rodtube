@@ -6,7 +6,6 @@ import { StyledTimeline } from "../src/components/Timeline";
 import { StyledFavoritos } from "../src/components/Favoritos";
 import { videoService } from "../src/services/videoService";
 
-
 function HomePage() {
 
     const [valorDoFiltro, setValorDoFiltro] = React.useState("");
@@ -96,10 +95,10 @@ const StyledBanner = styled.div`
     background-size: cover;
 `;
 
-function Header(props) {
+export function Header(props) {
     return (
         <StyledHeader>
-            <StyledBanner bg={config.banner} />
+            <StyledBanner bg={props.banner} />
             <section className="user-info">
                 <a href={`https://github.com/${config.github}`} target="_blank"><img src={`https://github.com/${config.github}.png`} /></a>
                 <div>
@@ -113,6 +112,14 @@ function Header(props) {
             </section>
         </StyledHeader>
     )
+}
+function splitMulti(str, tokens){
+    var tempChar = tokens[0];
+    for(var i = 1; i < tokens.length; i++){
+        str = str.split(tokens[i]).join(tempChar);
+    }
+    str = str.split(tempChar);
+    return str;
 }
 
 function Timeline({ searchValue, ...propriedades }) {
@@ -130,8 +137,10 @@ function Timeline({ searchValue, ...propriedades }) {
                                 const searchValueNormalized = searchValue.toLowerCase();
                                 return titleNormalized.includes(searchValueNormalized)
                             }).map((video) => {
+                                const split = splitMulti(video.url, ["watch?v=", "vi/", "be/", "&"]);
+                                var url = split[1];
                                 return (
-                                    <a key={video.url} href={video.url}>
+                                    <a key={url} href={`video/${url}`}>
                                         <img src={video.thumb} />
                                         <span>
                                             {video.title}

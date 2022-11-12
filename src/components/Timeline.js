@@ -18,12 +18,12 @@ export const StyledTimeline = styled.div`
     height: auto;
   }
   div::-webkit-scrollbar { 
-    height: 8px;
+    height: 10px;
     width: 0 !important
     
   }
   div::-webkit-scrollbar-track { 
-    background: ${({ theme }) => theme.backgroundLevel2};
+    background: ${({ theme }) => theme.track};
     border-radius: 25px;
   }
   div::-webkit-scrollbar-thumb { 
