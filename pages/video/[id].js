@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import Menu from "../../src/components/Menu";
 import { Header } from '..';
 import styled from "styled-components";
+import Link from 'next/link';
 
 
 const SLink = styled.div`
@@ -44,10 +45,10 @@ function Video() {
                 <h2><a href={vidurl} target='_blank'>Assista no Youtube</a> </h2>
 				<iframe width="80%" height="500px" src={`https://youtube.com/embed/${id}`} allowFullScreen></iframe>
 				</center>
-                <SLink><a
+                <SLink><Link
 						href='/'>
 						Voltar
-					</a>
+					</Link>
                     </SLink>
                 </div>
  
